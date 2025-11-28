@@ -1,12 +1,12 @@
 export interface CardProps {
-    title: string;
-    description: string;
-    imgUrl: string;
+  title: string;
+  description: string;
+  imgUrl: string;
 }
 
 export interface ButtonProps {
-    label: string;
-    onClick: ()=> void;
+  label: string;
+  onClick: () => void;
 }
 
 // Address structure
@@ -23,14 +23,31 @@ export interface Offers {
   occupants: string;
 }
 
+export interface Review {
+  avatar: string;
+  name: string;
+  date: Date;
+  tripType: string;
+  comment: string;
+  period: string
+}
+
+export interface amenity {
+  name:string;
+  icon:string;
+}
+
 // Main Property interface
 export interface PropertyProps {
   name: string;
   address: Address;
   rating: number;
-  category: string[];
+  category: amenity[];
   price: number;
   offers: Offers;
-  image: string;
+  image: string[];
   discount: string;
+  description: string;
+  reviews: Review[];
+  space: string;
 }

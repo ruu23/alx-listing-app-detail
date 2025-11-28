@@ -1,6 +1,8 @@
 import { PROPERTYLISTINGSAMPLE } from "@/constants/index";
 import { useRouter } from "next/router";
 import PropertyDetail from "@/components/property/PropertyDetail";
+import BookingSection from "@/components/property/BookingSection";
+import ReviewSection from "@/components/property/ReviewSection";
 
 export default function PropertyPage() {
   const router = useRouter();
@@ -10,8 +12,19 @@ export default function PropertyPage() {
   if (!property) return <p>Property not found</p>;
 
   return (
-    <div>
-      <PropertyDetail property={property} />
+    <div className="p-11">
+      <PropertyDetail property={property} part="top"/>
+      <div className="grid grid-cols-3 gap-5">
+        <div className="col-span-2">
+          <PropertyDetail property={property} part="bottom"/>
+          <ReviewSection reviews={property.reviews || []} property={property}/>
+        </div>
+        <div className="col-span-1">
+          <div className="sticky top-8">
+            <BookingSection price={property.price} />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
