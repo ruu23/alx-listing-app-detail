@@ -26,7 +26,7 @@ export interface Offers {
 export interface Review {
   avatar: string;
   name: string;
-  date: Date;
+  date: string;
   tripType: string;
   comment: string;
   period: string
