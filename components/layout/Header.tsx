@@ -3,20 +3,19 @@ import bag_icon from '@/public/assets/Case Minimalistic.svg'
 import alx from '@/public/assets/alx.png'
 import search from '@/public/assets/search.svg'
 
-
-
-
 const Header: React.FC = () => {
     return(
-        <header>
-            {/* first */}
-            <div className="flex flex-wrap items-center justify-center gap-4 bg-[#34967C] h-[47px]">
+        <header className="">
+            {/* ================= TOP BAR ================= */}
+            <div className="flex flex-wrap items-center justify-center gap-4 bg-[#34967C] h-[47px] text-[12px] sm:text-[16px]">
                 <Image src={bag_icon} alt="bag-icon"/>
-                <p className="text-white">Overseas trip? Get the latest information on travel guides</p>
+                <p className="text-white text-white leading-tight max-w-[240px] text-left 
+                                sm:max-w-none sm:leading-normal">
+                    Overseas trip? Get the latest information on travel guides</p>
                 <button className="bg-black text-white rounded-[50px] px-3">More Info</button>
             </div>
 
-            {/* middle */}
+            {/* ================= MIDDLE SECTION ================= */}
             <div className="flex flex-wrap items-center justify-between border border-[#E9E9E9] px-10 py-2">
                 <Image src={alx} alt="alx-logo"/>
 
