@@ -8,11 +8,11 @@ const Header: React.FC = () => {
   return (
     <header className="text-[12px] lg:text-[16px]">
       {/* ================= TOP BAR ================= */}
-      <div className="flex flex-wrap items-center justify-center gap-4 bg-[#34967C] h-[47px]">
+      <div className="flex flex-wrap items-center justify-center lg:gap-4 gap-2 bg-[#34967C] h-auto py-5">
         <Image src={bag_icon} alt="bag-icon" />
         <p
           className="text-white text-white leading-tight max-w-[240px] text-left 
-                                sm:max-w-none sm:leading-normal"
+                      sm:max-w-none sm:leading-normal"
         >
           Overseas trip? Get the latest information on travel guides
         </p>
@@ -79,48 +79,48 @@ const Header: React.FC = () => {
 
         {/*============ Mobile form ================== */}
 
-        <form className="lg:hidden flex flex-wrap-1 justify-center items-center border border-[#E9E9E9] rounded-[50px] pr-1 pl-5">
-          <div>
+        <form className="lg:hidden flex flex-wrap-1 justify-center items-center border border-[#E9E9E9] rounded-[50px] pr-1 pl-5 h-[46px] w-[18rem]">
+          <div className="">
             <label className="">where to</label>
-            <ul className="grid grid-cols-3 justify-center">
+            <ul className="flex flex-wrap-1 items-center justify-start">
               <li>
                 <input
                   type="text"
                   placeholder="Location"
-                  className="w-full text-sm outline-none border-none text-gray-400 placeholder-gray-400 bg-transparent"
+                  className="w-full outline-none border-none text-gray-400 placeholder-gray-400 bg-transparent"
                 />
               </li>
               <li>
                 <input
                   type="text"
                   placeholder="Date"
-                  className="w-full text-sm outline-none border-none text-gray-400 placeholder-gray-400 bg-transparent"
+                  className="w-full outline-none border-none text-gray-400 placeholder-gray-400 bg-transparent"
                 />
               </li>
               <li>
                 <input
                   type="text"
                   placeholder="Add guest"
-                  className="w-full text-sm outline-none border-none text-gray-400 placeholder-gray-400 bg-transparent"
+                  className="w-full outline-none border-none text-gray-400 placeholder-gray-400 bg-transparent"
                 />
               </li>
             </ul>
           </div>
 
           {/* button */}
-          <button className="bg-[#FFB700] rounded-full w-6 h-6 p-1 flex items-center justify-center flex-shrink-0">
+          <button className="bg-[#FFB700] rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
             <Image src={search} alt="search" />
           </button>
         </form>
 
         <div>
           <div className="xl:hidden">
-            <button>
-              <Image src={user} alt="user" />
+            <button className="">
+              <Image src={user} alt="user" className="" />
             </button>
           </div>
 
-          <div className="hidden xl:flex flex-wrap items-center justify-center gap-2 font-medium ">
+          <div className="hidden xl:flex flex-wrap items-center justify-center gap-2 font-medium">
             <button className="bg-[#34967C] rounded-3xl px-4 py-2 text-white">
               Sign in
             </button>

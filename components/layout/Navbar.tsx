@@ -22,9 +22,9 @@ const Navbar: React.FC = () => {
   return (
     <div className="relative">
       {/* Left fade overlay */}
-      <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+      <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
 
-      <div className="flex items-center gap-8 xl:gap-10 py-5 pl-[4rem] text-[#616161] overflow-x-auto scrollbar-hide">
+      <div className="flex items-center gap-8 xl:gap-10 py-5 pl-[3rem] text-[#616161] overflow-x-auto scrollbar-hide">
         {[
           { img: rooms, label: "Rooms" },
           { img: mansion, label: "Mansion" },
@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
             <Image
               src={item.img}
               alt={item.label}
-              className="w-[33px] h-[34px] group-hover:opacity-100 group-hover:brightness-0"
+              className="w-[34px] h-[35px] xl:w-[40px] xl:h-[40px] group-hover:opacity-100 group-hover:brightness-0"
             />
             <p className="text-[12px] font-medium whitespace-nowrap">
               {item.label}
@@ -65,4 +65,3 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
-
