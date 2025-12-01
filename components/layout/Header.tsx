@@ -22,7 +22,7 @@ const Header: React.FC = () => {
       </div>
 
       {/* ================= MIDDLE SECTION ================= */}
-      <div className="flex flex-wrap-1 items-center justify-center border border-[#E9E9E9] xl:gap-[12rem] lg:gap-5 py-3 gap-3 px-5">
+      <div className="flex flex-wrap-1 items-center justify-center border border-[#E9E9E9] xl:gap-[17rem] lg:gap-5 py-3 gap-3 px-5">
         <Image className="hidden sm:block" src={alx} alt="alx-logo" />
 
         {/* ============== Form for large and Xlarge ============= */}
